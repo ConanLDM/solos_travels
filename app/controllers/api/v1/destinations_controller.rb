@@ -2,7 +2,7 @@ class Api::V1::DestinationsController < ApplicationController
   before_action :set_destination, only: %i[show destroy]
 
   def index
-    destination = Destination.all.order(created_at :desc)
+    destination = Destination.all.order(created_at: :desc)
     render json: destination
   end
 

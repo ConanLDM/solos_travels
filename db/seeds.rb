@@ -9,6 +9,6 @@
     Destination.create(
         name: "Destination #{i + 1}",
         details: 'Welcome to the sunny isles off the east coast of Central America',
-        instruction: 'One of the glorious destinations on the planet, this place is near the equator and sunny with pristine beaches all year round'
-        )
+        instruction: 'One of the most glorious destinations on the planet, this place is near the equator and sunny with pristine beaches all year round'
+    )
 end
