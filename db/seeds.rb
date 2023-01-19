@@ -5,10 +5,4 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-5.times do |i|
-    Destination.create(
-        name: "Destination #{i + 1}",
-        details: 'Welcome to the sunny isles off the east coast of Central America',
-        instruction: 'One of the most glorious destinations on the planet, this place is near the equator and sunny with pristine beaches all year round'
-    )
-end
+load(Rails.root.join( 'db', 'faker_destinations.rb'))

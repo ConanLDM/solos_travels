@@ -2,25 +2,25 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 
 .bg_primary-color {
-  background-color: #e0cdcd;
+  background-color: #ff69b4; /* pink */
 }
 .primary-color {
-  background-color: #575454;
+  background-color: #ffffff; /* orange */
 }
 .bg_secondary-color {
-  background-color: #293241;
+  background-color: #006400; /* dark green */
 }
 .secondary-color {
-  color: #293241;
+  color: #006400; /* dark green */
 }
 .custom-button.btn {
-  background-color: #293241;
+  background-color: #006400; /* dark green */
   color: #FFF;
   border: none;
 }
 .hero {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 .hero img {
   object-fit: cover;
