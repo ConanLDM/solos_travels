@@ -31,7 +31,7 @@ const allDestinations = destinations.map((destination, index) => (
             />
             <div className="card-body">
                 <h4 className="card-title">{destination.name}</h4>
-                <Link to={` /destintation/${destination.id}`} className="btn custom-button">
+                <Link to={` /destination/${destination.id}`} className="btn custom-button">
                     View Destination
                 </Link>
             </div>
