@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'recipes/index'
+      get 'recipes/create'
+      get 'recipes/show'
+      get 'recipes/destroy'
       get 'destinations/index'
       post 'destinations/create'
       get '/show/:id', to: 'destinations#show'
