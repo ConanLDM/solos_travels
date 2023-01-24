@@ -21,13 +21,13 @@ class Api::V1::DestinationsController < ApplicationController
 
   def destroy
     @destination&.destroy
-    render json: { message: 'Destination has been deleted!' }
+    render json: { message: 'Destination deleted!' }
   end
 
   private
 
   def destination_params
-    params.permit(:name, :image, :details, :instruction)
+    params.permit(:name, :image, :ingredients, :instruction)
   end
 
   def set_destination

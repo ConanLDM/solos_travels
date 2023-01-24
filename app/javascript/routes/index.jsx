@@ -5,15 +5,13 @@ import Destinations from "../components/Destinations";
 import Destination from "../components/Destination";
 import NewDestination from "../components/NewDestination";
 
-// make sure import above matches up with the routes below
-
 export default (
   <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/destinations" element={<Destinations />} />
-      <Route path="/destination/:id" element={<Destination />} />
-      <Route path="/destination" element={<NewDestination />} />
+      <Route path="/" exact component={Home} />
+      <Route path="/destinations" exact component={Destinations} />
+      <Route path="/destination/:id" exact component={Destination} />
+      <Route path="/destinations/new" element={<NewDestination />} />
     </Routes>
   </Router>
 );

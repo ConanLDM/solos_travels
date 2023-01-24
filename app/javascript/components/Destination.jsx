@@ -29,7 +29,7 @@ const Destination = () => {
     let destinationList = "No destinations currently available";
 
     if (destination.details.length > 0) {
-      destinationList = destination.details
+      detailsList = destination.details
         .split(",")
         .map((details, index) => (
           <li key={index} className="list-group-item">
@@ -38,7 +38,7 @@ const Destination = () => {
         ));
     }
 
-    return destinationList;
+    return detailsList;
   };
 
   const destinationInstruction = addHtmlEntities(destination.instruction);
@@ -55,7 +55,6 @@ const Destination = () => {
       <h1 className="display-4 position-relative text-white">
         {destination.name}
       </h1>
-    
     </div>
     <div className="container py-4">
       <div className="row">

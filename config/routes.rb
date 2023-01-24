@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post 'destinations/create'
       get '/show/:id', to: 'destinations#show'
       delete '/destroy/:id', to: 'destinations#destroy'
+      get '/destinations/new', to: 'destinations#new', as: 'new_destination'
     end
   end
   root 'homepage#index'

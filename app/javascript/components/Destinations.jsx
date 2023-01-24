@@ -2,25 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Destinations = () => {
-    const navigate = useNavigate();
-    const [destinations, setDestinations] = useState([]);
-
+const navigate = useNavigate();
+const [destinations, setDestinations] = useState([]);
 
 //  implementing useEffect hook in order to fetch destinations from seed file
-    useEffect(() => {
-        const url = "/api/v1/destinations/index";
-        fetch(url)
+useEffect(() => {
+    const url = "/api/v1/destinations/index";
+    fetch(url)
         .then((res) => {
             if (res.ok) {
-            return res.json();
+                return res.json();
             }
             throw new Error("Did not return as expected.");
         })
         .then((res) => setDestinations(res))
         .catch(() => navigate("/"));
-    }, []);
+}, []);
 
-    // need to implement how the webpage will display the content and examine what needs to appear
+// need to implement how the webpage will display the content and examine what needs to appear
 const allDestinations = destinations.map((destination, index) => (
     <div key={index} className="col-md-5 col-lg-3">
         <div className="card mb-5">
@@ -31,7 +30,7 @@ const allDestinations = destinations.map((destination, index) => (
             />
             <div className="card-body">
                 <h4 className="card-title">{destination.name}</h4>
-                <Link to={` /destination/${destination.id}`} className="btn custom-button">
+                <Link to={`/destination/${destination.id}`} className="btn custom-button">
                     View Destination
                 </Link>
             </div>
@@ -40,10 +39,10 @@ const allDestinations = destinations.map((destination, index) => (
 ));
 const noDestination = (
     <div className="vw-100 vh-60 d-flex align-items-center justify-content-center">
-      <h3>
-        No destinations currently. Instead you can <Link to="/new_destination">create a destination</Link>
-      </h3>
-    </div>    
+        <h3>
+            No destinations currently. Instead you can <Link to="/destinations/new">create a destination</Link>
+        </h3>
+    </div>
 );
 
 return (
@@ -61,9 +60,9 @@ return (
         <div className="py-5">
             <main className="container">
                 <div className="text-end mb-3">
-                    <Link to="/destination" className="btn custom-button">
-                        Create A New Destination
-                    </Link>
+                <Link to="/destinations/new" className="btn custom-button">
+                    Create A New Destination
+                </Link>
                 </div>
                 <div className="row">
                     {destinations.length > 0 ? allDestinations : noDestination}
@@ -71,8 +70,8 @@ return (
                 <Link to="/" className="btn btn-link">
                     Home
                 </Link>
-                </main>
-            </div>
+            </main>
+        </div>
         </>
     );
 };
