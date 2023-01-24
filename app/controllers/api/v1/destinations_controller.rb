@@ -27,7 +27,7 @@ class Api::V1::DestinationsController < ApplicationController
   private
 
   def destination_params
-    params.permit(:name, :image, :ingredients, :instruction)
+    params.permit(:name, :image, :details, :instruction)
   end
 
   def set_destination
